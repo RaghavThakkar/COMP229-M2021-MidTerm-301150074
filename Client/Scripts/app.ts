@@ -1,28 +1,25 @@
 //IIFE -- Immediately Invoked Function Expression
 "use strict";
 
-(function(){
+(function () {
 
-    function confirmDelete()
-    {
-      // confirm deletion
-      $("a.delete").on("click", function(event){
-        if(!confirm("Are you sure?"))
-        {
-          event.preventDefault();
-          location.href = '/clothing-list';
-        }       
-      });
-    }
+  function confirmDelete() {
+    // confirm deletion
+    $("a.delete").on("click", function (event) {
+      if (!confirm("Are you sure?")) {
+        event.preventDefault();
+        location.href = '/books';
+      }
+    });
+  }
 
-    function Start():void
-    {
-        console.log("App Started");
-        
-        confirmDelete();  
-    }
+  function Start(): void {
+    console.log("App Started");
 
-    window.addEventListener("load", Start);
+    confirmDelete();
+  }
+
+  window.addEventListener("load", Start);
 
 })();
 
