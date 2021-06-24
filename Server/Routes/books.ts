@@ -78,20 +78,45 @@ router.get('/:id', (req, res, next) => {
 
 // POST - process the information passed from the details form and update the document
 router.post('/:id', (req, res, next) => {
+  let id = req.params.id;
 
-  /*****************
-   * ADD CODE HERE *
-   *****************/
+  let updateBook = new book
+    ({
+      "_id": id,
+      "Title": req.body.title,
+      "Description": "",
+      "Price": req.body.price,
+      "Author": req.body.author,
+      "Genre": req.body.genre
+    });
+
+
+  book.updateOne({ _id: id }, updateBook, {}, (err) => {
+    if (err) {
+      console.error(err);
+      res.end(err);
+    }
+
+    res.redirect('/books');
+  });
 
 });
 
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
+  let id = req.params.id;
 
-  /*****************
-   * ADD CODE HERE *
-   *****************/
+  // db.clothing.remove({"_id: id"})
+  book.remove({ _id: id }, (err) => {
+    if (err) {
+      console.error(err);
+      res.end(err);
+    }
+
+    res.redirect('/books');
+  });
 });
+
 
 
 //module.exports = router;
