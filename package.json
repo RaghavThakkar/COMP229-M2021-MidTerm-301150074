@@ -1,5 +1,5 @@
 {
-  "name": "comp229-m2021-midterm-typescript",
+  "name": "comp229-m2021-midterm-301150074",
   "version": "0.0.3",
   "private": true,
   "scripts": {
@@ -46,17 +46,17 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/RaghavThakkar/COMP229-M2021-MidTerm-301150074.git"
   },
   "keywords": [
     "NodeJS",
     "ExpressJS",
     "EJS"
   ],
-  "author": "Your Name Goes Here",
+  "author": "Raghav Thakkar",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/RaghavThakkar/COMP229-M2021-MidTerm-301150074.git"
   },
   "homepage": ""
 }
