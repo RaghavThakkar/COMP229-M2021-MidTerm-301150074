@@ -30,13 +30,12 @@
                   <td class="text-center">$<%= books[count].Price %></td>
                   <td class="text-center"><%= books[count].Author %></td>
                   <td class="text-center"><%= books[count].Genre %></td>
- <td class="text-center">
-                      <a href="/books/<%=books[count].id%>"><i class="fas fa-edit"></i></a>
-      
+                  <td class="text-center">
+                    <a href="/books/<%=books[count].id%>"><i class="fas fa-edit"></i></a>
                   </td>
 
                   <td class="text-center">
-                  <a href="/books/delete/<%=books[count].id%>" class="delete"><i class="fas fa-trash"></i></a>
+                    <a href="/books/delete/<%=books[count].id%>" class="delete"><i class="fas fa-trash"></i></a>
                   </td>
                 </tr>
                 <% } %>
