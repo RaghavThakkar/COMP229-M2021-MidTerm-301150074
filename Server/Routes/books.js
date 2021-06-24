@@ -45,6 +45,18 @@ router.post('/add', (req, res, next) => {
     });
 });
 router.get('/:id', (req, res, next) => {
+    let id = req.params['id'];
+    books_1.default.findById(id, {}, {}, (err, item) => {
+        if (err) {
+            console.error(err);
+            res.end(err);
+        }
+        res.render('books/details', {
+            title: 'Books',
+            page: 'books',
+            books: item
+        });
+    });
 });
 router.post('/:id', (req, res, next) => {
 });
